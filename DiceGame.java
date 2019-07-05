@@ -26,6 +26,12 @@ public class DiceGame {
     System.out.println("Die 1: "+fv1);
     System.out.println("Die 2: "+fv2);
     System.out.println("Total value: "+(fv1 + fv2));
+    if((fv1 + fv2) >= 7) {
+      System.out.println("You won");
+    }
+    else {
+      System.out.println("You lost");
+    }
   }
 
   public static void main(String[] args){

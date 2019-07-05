@@ -1,9 +1,22 @@
 import java.util.Random;
+import java.util.Scanner;
+
+class Player {
+  private String name;
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+}
 
 class Die {
   private int faceValue;
 
-  public int getFaceValue(){
+  public int getFaceValue() {
     return faceValue;
   }
   public void roll(){
@@ -12,10 +25,16 @@ class Die {
 }
 
 public class DiceGame {
+  Player player = new Player();
   Die die1 = new Die();
   Die die2 = new Die();
 
   public void play(){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("What is your name?");
+    player.setName(scanner.next());
+    System.out.println("Hello, "+ player.getName() +"!");
+
     int fv1;
     int fv2;
     die1.roll();

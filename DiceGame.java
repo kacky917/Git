@@ -2,7 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Player {
-  public String name;
+  private String name;
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   public String getName() {
     return name;
@@ -28,7 +32,7 @@ public class DiceGame {
   public void play(){
     Scanner scanner = new Scanner(System.in);
     System.out.println("What is your name?");
-    player.name = scanner.next();
+    player.setName(scanner.next());
     System.out.println("Hello, "+ player.getName() +"!");
 
     int fv1;
